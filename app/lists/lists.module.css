@@ -1,0 +1,127 @@
+.container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 10px;
+  row-gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.film {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 10px;
+  justify-content: center;
+  transition: 0.3s ease-in-out;
+}
+
+.film > h6 {
+  font-size: 11px;
+}
+
+.film > .ImageContainer {
+  width: 300px;
+  height: 150px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: 0.4s ease-in-out;
+  color: #fff;
+}
+
+.film > .ImageContainer:hover:before {
+  opacity: 1;
+}
+.film > .ImageContainer:hover:before {
+  filter: blur(50%);
+}
+
+.film > .ImageContainer:hover .Interact {
+  opacity: 1;
+}
+
+.film > .ImageContainer img {
+  transition: 0.3s ease-in-out;
+  object-fit: cover;
+}
+
+.film > .ImageContainer:hover img {
+  transform: translateY(-10px);
+}
+
+.ImageContainer:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(50turn, rgb(0, 0, 0), 30%, transparent);
+  z-index: 2;
+  transition: 0.2s ease-in;
+  opacity: 0;
+}
+
+.emptyList {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  align-items: center;
+}
+
+.emptyList button {
+  padding: 10px 20px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.emptyList > button:hover {
+  transform: translateY(-2px);
+}
+
+.removeBtn {
+  opacity: 0;
+  z-index: 3;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+}
+
+.removeBtn button {
+  transform: translateY(40px);
+}
+
+.ImageContainer:hover .removeBtn {
+  opacity: 1;
+}
+.ImageContainer:hover .removeBtn button {
+  transform: translateY(0);
+}
+
+.removeBtn button {
+  padding: 10px 20px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  background-color: rgb(210, 94, 94);
+  color: white;
+}

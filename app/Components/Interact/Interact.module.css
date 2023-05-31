@@ -1,0 +1,17 @@
+.Interact {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+
+.Icon {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.More {
+  border: 1px solid white;
+  border-radius: 50%;
+  padding: 5px;
+}
